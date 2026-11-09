@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chars Stream Pro - Catálogo Oficial</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #090615; --card: #140f26; --text: #e2e8f0; --accent: #a855f7; --accent-glow: rgba(168, 85, 247, 0.4); --badge-bg: #221440; --badge-border: #442a80; }
+  body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); padding-bottom: 120px; }
+  header { background: rgba(20, 15, 38, 0.95); backdrop-filter: blur(10px); padding: 1rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.6); text-align: center; font-size: 1.4rem; font-weight: 700; color: #fff; letter-spacing: 1px; display: flex; justify-content: center; align-items: center; gap: 0.5rem; }
+  header span { color: var(--accent); }
+  .hero { text-align: center; padding: 2rem 1rem 1.5rem; }
+  .hero h1 { margin: 0; font-size: 1.8rem; color: #fff; }
+  .hero p { color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 1rem; }
+  .btn-group { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem; }
+  .action-btn { background: transparent; border: 1.5px solid var(--accent); color: var(--accent); padding: 8px 20px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
+  .action-btn:hover { background: var(--accent); color: #fff; box-shadow: 0 0 10px var(--accent-glow); }
+  .action-btn.ofertas { border-color: #ef4444; color: #ef4444; }
+  .action-btn.ofertas:hover { background: #ef4444; color: #fff; box-shadow: 0 0 10px rgba(239,68,68,0.4); }
+  .search-container { max-width: 800px; margin: 0 auto 1rem; padding: 0 1rem; }
+  .search-bar { width: 100%; padding: 14px 24px; border-radius: 30px; border: 1.5px solid #2d1d4c; background: #1a1235; color: white; font-family: 'Poppins', sans-serif; font-size: 1rem; outline: none; transition: 0.3s; }
+  .search-bar:focus { border-color: var(--accent); box-shadow: 0 0 12px var(--accent-glow); }
+  
+  .carousel-section { max-width: 800px; margin: 0 auto 1.5rem; padding: 0 1rem; }
+  .carousel-section h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .carousel { display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .carousel::-webkit-scrollbar { display: none; }
+  .carousel-card { flex: 0 0 82%; max-width: 280px; background: linear-gradient(145deg, #1f143a, #140f26); border: 1px solid #442a80; border-radius: 16px; padding: 1.5rem; scroll-snap-align: center; position: relative; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+  .promo-badge { position: absolute; top: 12px; right: 12px; background: #ff0055; color: white; font-size: 0.7rem; font-weight: bold; padding: 4px 10px; border-radius: 20px; box-shadow: 0 2px 8px rgba(255,0,85,0.5); }
+  .carousel-title { color: #fff; font-size: 1.15rem; font-weight: 700; margin: 0 0 0.5rem 0; line-height: 1.2; }
+  .carousel-desc { color: #94a3b8; font-size: 0.8rem; margin-bottom: 1rem; line-height: 1.4; }
+  .carousel-price { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+  .carousel-btn { display: block; width: 100%; background: var(--accent); color: white; padding: 10px; border-radius: 10px; font-weight: 600; border: none; cursor: pointer; transition: 0.2s; font-family: 'Poppins', sans-serif; }
+  .carousel-btn:hover { transform: translateY(-2px); }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+  .category { background: var(--card); border-radius: 20px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #1f143a; }
+  .category h2 { margin-top: 0; border-bottom: 2px solid #2e1e50; padding-bottom: 0.8rem; color: #fff; font-size: 1.25rem; font-weight: 600; }
+  .item { padding: 1rem; border-radius: 12px; margin-bottom: 0.8rem; background: #0e0a1e; cursor: pointer; border: 1px solid #1b1338; transition: 0.2s; user-select: none; }
+  .item:hover { transform: translateY(-2px); border-color: var(--accent); background: #130d2a; }
+  .item-header { display: flex; gap: 1rem; align-items: center; position: relative; }
+  .logo-img { width: 44px; height: 44px; border-radius: 10px; object-fit: contain; background: #fff; padding: 2px; }
+  .logo-container { width: 48px; min-width: 48px; height: 48px; min-height: 48px; flex-shrink: 0; margin-right: 15px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; color: #fff; box-shadow: inset 0 2px 4px rgba(255,255,255,0.2), 0 4px 10px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); text-shadow: 1px 1px 3px rgba(0,0,0,0.6); overflow: hidden; }
+  .item-info { display: flex; flex-direction: column; gap: 0.2rem; flex-grow: 1; }
+  .item-title { font-weight: 600; font-size: 1.05rem; color: #f8fafc; }
+  .item-price { color: var(--accent); font-size: 0.95rem; font-weight: 700; }
+  .badge-container { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+  .badge { font-size: 0.65rem; font-weight: 600; padding: 3px 8px; border-radius: 20px; border: 1px solid var(--badge-border); background: var(--badge-bg); color: #c084fc; text-transform: uppercase; }
+  .badge.garantia { border-color: #10b981; background: rgba(16, 185, 129, 0.1); color: #34d399; }
+  .badge.urgencia { border-color: #ef4444; background: rgba(239, 68, 68, 0.1); color: #f87171; }
+  .badge.acceso { border-color: #3b82f6; background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
+  .chevron { font-size: 0.8rem; color: #4e3f7a; transition: 0.3s; margin-left: auto; padding-left: 0.5rem; }
+  .item.open .chevron { transform: rotate(180deg); color: var(--accent); }
+  .item-details { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
+  .item.open .item-details { max-height: 800px; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #221544; }
+  .item-banner { width: 100%; border-radius: 8px; margin-bottom: 10px; object-fit: cover; border: 1px solid #2e1e50; }
+  .benefits-list { list-style: none; padding: 0; margin: 0.5rem 0 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .benefits-list li { display: flex; align-items: center; gap: 0.4rem; color: #cbd5e1; }
+  .benefits-list li::before { content: "⚡"; font-size: 0.8rem; color: var(--accent); }
+  
+  .nu-banner { max-width: 800px; margin: 2rem auto 0; padding: 1.5rem; background: linear-gradient(135deg, #820ad1, #57058f); border-radius: 16px; display: flex; align-items: center; gap: 1rem; box-shadow: 0 8px 20px rgba(130, 10, 209, 0.3); border: 1px solid #a338e3; }
+  .nu-banner img { width: 50px; height: 50px; object-fit: contain; }
+  .nu-text { color: white; }
+  .nu-text h4 { margin: 0 0 0.2rem 0; font-size: 1.1rem; }
+  .nu-text p { margin: 0; font-size: 0.8rem; color: #e9d5ff; }
+
+  footer { text-align: center; padding: 2.5rem 1rem; color: #4e3f7a; font-size: 0.85rem; }
+  .no-results { text-align: center; color: #94a3b8; padding: 2rem; display: none; }
+  .whatsapp-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer; display: flex; flex-direction: column; align-items: center; animation: float 3s infinite; }
+  .jazander-wa-btn { width: 75px; height: 75px; border-radius: 50%; object-fit: cover; border: 3px solid #25D366; background: #090615; transition: 0.3s; }
+  .wa-label { background: rgba(0,0,0,0.8); color: white; padding: 5px 12px; border-radius: 12px; font-size: 0.75rem; margin-top: 8px; font-weight: 600; border: 1px solid #25D366; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  
+  .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center; padding: 1rem; backdrop-filter: blur(8px); }
+  .modal-content { background: var(--card); border: 1px solid #442a80; border-radius: 20px; width: 100%; max-width: 500px; max-height: 85vh; overflow-y: auto; padding: 2rem; position: relative; }
+  .close-btn { position: absolute; top: 15px; right: 20px; font-size: 1.8rem; cursor: pointer; color: #94a3b8; }
+  .avatar-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin: 0 auto; display: block; }
+  .wa-btn { display: block; background: #25D366; color: white; border-radius: 12px; padding: 14px; text-decoration: none; font-weight: 600; font-size: 1rem; text-align: center; margin-bottom: 1rem; }
+  .pin-input { width: 100%; padding: 15px; background: #090615; border: 2px solid #442a80; color: white; text-align: center; font-size: 1.5rem; border-radius: 12px; margin-bottom: 1rem; letter-spacing: 5px; outline: none; }
+  .pin-input:focus { border-color: var(--accent); }
+
+  /* CHARS NEON GLASS V1 */
+
+  .item {
+    background: linear-gradient(
+      135deg,
+      rgba(35, 25, 75, 0.80),
+      rgba(12, 16, 42, 0.88)
+    );
+    border: 1px solid rgba(80, 210, 255, 0.35);
+    border-radius: 18px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.30),
+      0 0 14px rgba(130, 70, 255, 0.12);
+    transition: all 0.25s ease;
+  }
+
+  .item:hover,
+  .item.open {
+    transform: translateY(-2px);
+    border-color: #55ddff;
+    background: linear-gradient(
+      135deg,
+      rgba(44, 30, 94, 0.92),
+      rgba(15, 23, 55, 0.96)
+    );
+    box-shadow:
+      0 0 18px rgba(85, 221, 255, 0.25),
+      0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .item-price {
+    color: #c084fc;
+    text-shadow: 0 0 9px rgba(192, 132, 252, 0.35);
+  }
+
+
+  /* CHARS NEON COMBOS V1 */
+
+  .carousel-card {
+    border: 1px solid rgba(90, 220, 255, 0.65);
+    border-radius: 20px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+      0 0 15px rgba(0, 217, 255, 0.18),
+      0 0 28px rgba(168, 85, 247, 0.15),
+      0 12px 30px rgba(0, 0, 0, 0.35);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .carousel-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.10),
+      transparent 45%,
+      rgba(168, 85, 247, 0.08)
+    );
+
+    pointer-events: none;
+  }
+
+  .carousel-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+      0 0 22px rgba(0, 217, 255, 0.35),
+      0 0 36px rgba(168, 85, 247, 0.22);
+  }
+
+  .carousel-btn {
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.30);
+  }
+
+
+  /* CHARS FIX COMBOS V1 */
+
+  .carousel-card .carousel-title {
+    padding-top: 2rem;
+  }
+
+  .carousel-card .promo-badge {
+    z-index: 2;
+    max-width: calc(100% - 24px);
+    box-sizing: border-box;
+  }
+
+
+  /* CHARS NEON HEADER V1 */
+
+  header {
+    background: linear-gradient(
+      110deg,
+      rgba(10, 12, 32, 0.96),
+      rgba(38, 16, 72, 0.94),
+      rgba(10, 16, 38, 0.96)
+    );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(168, 85, 247, 0.45);
+
+    box-shadow:
+      0 5px 25px rgba(0, 0, 0, 0.45),
+      0 0 20px rgba(168, 85, 247, 0.15);
+
+    text-shadow:
+      0 0 12px rgba(100, 200, 255, 0.25);
+  }
+
+  header span {
+    color: #c084fc;
+
+    text-shadow:
+      0 0 10px rgba(192, 132, 252, 0.55),
+      0 0 22px rgba(168, 85, 247, 0.30);
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+    width: 76%;
+    height: 2px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #a855f7,
+      #38bdf8,
+      transparent
+    );
+
+    box-shadow:
+      0 0 12px rgba(56, 189, 248, 0.6);
+
+    pointer-events: none;
+  }
+
+  @media (max-width: 380px) {
+    header {
+      font-size: 1.15rem;
+      letter-spacing: 0.3px;
+    }
+  }
+
+
+  /* CHARS NEON SEARCH V1 */
+
+  .search-container {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .search-bar {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+      135deg,
+      rgba(36, 23, 76, 0.88),
+      rgba(13, 20, 49, 0.92)
+    );
+
+    border: 1px solid rgba(110, 200, 255, 0.45);
+    border-radius: 18px;
+
+    color: #ffffff;
+    padding: 16px 20px;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+      0 0 15px rgba(168, 85, 247, 0.14),
+      0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .search-bar:focus {
+    outline: none;
+    border-color: #38bdf8;
+
+    box-shadow:
+      0 0 12px rgba(56, 189, 248, 0.45),
+      0 0 25px rgba(168, 85, 247, 0.25);
+  }
+
+  .search-bar::placeholder {
+    color: #a59dbb;
+    opacity: 1;
+  }
+
+
+/* CHARS MENU CATEGORIAS V1 */
+.chars-fast-nav {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.chars-fast-title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.chars-fast-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 5px 2px 16px;
+  scroll-snap-type: x proximity;
+}
+
+.chars-fast-btn {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+  border-radius: 15px;
+  border: 1px solid #855bcb;
+  background: linear-gradient(
+    135deg,
+    rgba(57, 31, 100, .85),
+    rgba(14, 27, 57, .9)
+  );
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 12px rgba(168,85,247,.15);
+  scroll-snap-align: start;
+}
+
+.chars-fast-btn:active,
+.chars-fast-btn:focus-visible {
+  border-color: #38bdf8;
+  box-shadow: 0 0 18px rgba(56,189,248,.5);
+}
+
+#catalog .category {
+  scroll-margin-top: 110px;
+}
+
+
+/* CHARS HARVIS MOBILE V1 */
+
+@media (max-width: 600px) {
+
+  .whatsapp-container {
+    right: 12px;
+    bottom: calc(
+      12px + env(safe-area-inset-bottom, 0px)
+    );
+
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 6px;
+
+    max-width: calc(100vw - 24px);
+    animation: none;
+  }
+
+  .jazander-wa-btn {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+
+    border: 2px solid #25D366;
+
+    box-shadow:
+      0 0 12px rgba(37, 211, 102, 0.45),
+      0 0 20px rgba(168, 85, 247, 0.20);
+  }
+
+  .wa-label {
+    margin-top: 0;
+    padding: 6px 9px;
+
+    font-size: 0.68rem;
+    white-space: nowrap;
+
+    background: rgba(9, 6, 21, 0.92);
+    border: 1px solid #25D366;
+
+    box-shadow:
+      0 0 10px rgba(37, 211, 102, 0.18);
+  }
+}
+
+
+/* CHARS NEON CATEGORIES V1 */
+
+#catalog .category {
+  background: linear-gradient(
+    145deg,
+    rgba(32, 22, 65, 0.88),
+    rgba(10, 16, 40, 0.93)
+  );
+
+  border: 1px solid rgba(90, 200, 255, 0.28);
+  border-radius: 22px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 18px rgba(168, 85, 247, 0.12),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+#catalog .category h2 {
+  position: relative;
+  color: #ffffff;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  border-bottom: none;
+  padding-bottom: 18px;
+
+  text-shadow:
+    0 0 12px rgba(168, 85, 247, 0.35);
+}
+
+#catalog .category h2::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #a855f7,
+    transparent
+  );
+
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+@media (max-width: 600px) {
+  #catalog .category {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+
+/* CHARS HARVIS COMPACTO V2 */
+
+@media (max-width: 600px) {
+
+  .whatsapp-container {
+    position: fixed;
+    right: 8px;
+    bottom: calc(
+      8px + env(safe-area-inset-bottom, 0px)
+    );
+
+    width: 50px;
+    max-width: 50px;
+    flex-direction: column;
+    gap: 0;
+
+    animation: none;
+    z-index: 1000;
+  }
+
+  .jazander-wa-btn {
+    width: 46px;
+    height: 46px;
+
+    border: 2px solid #25D366;
+    border-radius: 50%;
+
+    box-shadow:
+      0 0 12px rgba(37, 211, 102, 0.5),
+      0 0 18px rgba(168, 85, 247, 0.25);
+  }
+
+  .wa-label {
+    display: none;
+  }
+}
+
+
+/* CHARS PEDIDOS V1 */
+
+.chars-order-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 16px;
+  padding: 13px 12px;
+
+  background: linear-gradient(
+    135deg, #078d68, #16c784
+  );
+
+  border: 1px solid #55f5b9;
+  border-radius: 12px;
+
+  color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 14px rgba(16, 185, 129, 0.3);
+}
+
+.chars-order-btn:active {
+  transform: scale(0.98);
+}
+
+.chars-order-summary {
+  color: #e9d5ff;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid #7045aa;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+
+/* CHARS HARVIS AUTOHIDE V1 */
+
+@media (max-width: 600px) {
+
+  .whatsapp-container {
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .whatsapp-container.chars-harvis-hidden {
+    opacity: 0;
+    transform: translateX(85px);
+    pointer-events: none;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-container {
+    transition: none;
+  }
+}
+
+
+/* CHARS PRECIOS PREMIUM V1 */
+
+#catalog .item-price {
+  display: inline-block;
+  width: fit-content;
+
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+
+  color: #facc6b;
+
+  text-shadow:
+    0 0 10px rgba(250, 204, 107, 0.35),
+    0 0 20px rgba(168, 85, 247, 0.2);
+
+  margin-top: 5px;
+}
+
+.carousel-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+
+  text-shadow:
+    0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+@media (max-width: 600px) {
+  #catalog .item-price {
+    font-size: 1.2rem;
+  }
+
+  .carousel-price {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* CHARS BOTONES NEON V1 */
+
+/* Botones de servicios */
+.chars-order-btn {
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #087f62,
+    #10b981,
+    #087f62
+  );
+
+  border: 1px solid #59ffbc;
+  border-radius: 14px;
+
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  box-shadow:
+    0 0 10px rgba(16, 185, 129, 0.35),
+    0 0 22px rgba(16, 185, 129, 0.15),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chars-order-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 18px rgba(16, 185, 129, 0.55),
+    0 0 30px rgba(16, 185, 129, 0.25);
+}
+
+.chars-order-btn:active {
+  transform: scale(0.97);
+}
+
+/* Botones de combos */
+.carousel-btn {
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 15px rgba(168, 85, 247, 0.3),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 22px rgba(168, 85, 247, 0.5);
+}
+
+/* Accesibilidad */
+.chars-order-btn:focus-visible,
+.carousel-btn:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chars-order-btn,
+  .carousel-btn {
+    transition: none;
+  }
+}
+
+
+/* CHARS TARJETAS PREMIUM V1 */
+
+#catalog .item-header {
+  gap: 12px;
+}
+
+#catalog .logo-container {
+  margin-right: 0;
+}
+
+#catalog .item-info {
+  min-width: 0;
+}
+
+#catalog .item-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* Precio destacado */
+#catalog .item-price {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 9px;
+  padding: 9px 12px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(94, 65, 34, 0.35),
+    rgba(55, 32, 75, 0.55)
+  );
+
+  border: 1px solid rgba(250, 204, 107, 0.35);
+  border-radius: 12px;
+
+  color: #facc6b;
+  overflow-wrap: anywhere;
+}
+
+#catalog .item-price::before {
+  content: "PRECIO / PLAN";
+  display: block;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #ead0a0;
+  margin-bottom: 3px;
+}
+
+/* Etiquetas */
+#catalog .badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#catalog .badge {
+  padding: 5px 9px;
+  border-radius: 9px;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+#catalog .badge.acceso {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #7dd3fc;
+}
+
+#catalog .badge.garantia {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #6ee7b7;
+}
+
+@media (max-width: 600px) {
+  #catalog .item {
+    padding: 12px;
+  }
+}
+
+
+/* CHARS SELECTOR DISNEY V1 */
+
+.chars-plan-picker {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(18, 25, 57, 0.7);
+  border: 1px solid rgba(56,189,248,0.35);
+}
+
+.chars-plan-label {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.chars-plan-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chars-plan-option {
+  flex: 1 1 110px;
+  padding: 12px 8px;
+  border-radius: 12px;
+  background: rgba(42, 30, 76, 0.8);
+  border: 1px solid #5c458e;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chars-plan-option.selected {
+  border-color: #38bdf8;
+  background: rgba(24, 75, 127, 0.7);
+  box-shadow: 0 0 15px rgba(56,189,248,0.3);
+}
+
+</style>
+</head>
+<body>
+  <header>🛡️ Chars Stream<span>Pro</span></header>
+  <div class="hero">
+    <h1>¿Qué servicio buscas hoy?</h1>
+    <p>Calidad premium con garantía de entrega y soporte continuo.</p>
+    <div class="btn-group">
+      <button onclick="openModal('historyModal')" class="action-btn">📖 Nuestra Historia</button>
+      <button onclick="openModal('faqModal')" class="action-btn">❓ Dudas y Garantía</button>
+      <button onclick="filterOfertas()" class="action-btn ofertas">🔥 Solo Ofertas</button>
+    </div>
+  </div>
+  
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Buscar streaming, trámites..." oninput="filterServices()">
+  </div>
+
+  
+<nav class="chars-fast-nav" aria-label="Categorias">
+  <div class="chars-fast-title">
+    🧭 Explora por categoria
+  </div>
+  <div class="chars-fast-track">
+    <button type="button" class="chars-fast-btn" data-cat="0">🎬 Streaming</button>
+<button type="button" class="chars-fast-btn" data-cat="1">⚽ Deportes</button>
+<button type="button" class="chars-fast-btn" data-cat="2">🎵 Música</button>
+<button type="button" class="chars-fast-btn" data-cat="3">🪄 Aplicaciones</button>
+<button type="button" class="chars-fast-btn" data-cat="4">🔐 VPN</button>
+<button type="button" class="chars-fast-btn" data-cat="5">📄 Trámites</button>
+<button type="button" class="chars-fast-btn" data-cat="6">🩺 Salud</button>
+<button type="button" class="chars-fast-btn" data-cat="7">🎓 Educación</button>
+<button type="button" class="chars-fast-btn" data-cat="8">🚗 Automóviles</button>
+<button type="button" class="chars-fast-btn" data-cat="9">🏠 INFONAVIT</button>
+  </div>
+</nav>
+
+<div class="carousel-section" id="promoCarousel">
+    <h3>🔥 Ofertas Relámpago (Combos a favor)</h3>
+    <div class="carousel">
+      
+      <div class="carousel-card" style="background: linear-gradient(145deg, #102a43, #0a0f25); border-color: #2b4c7e;">
+        <div class="promo-badge" style="background: #3b82f6;">COMBO PLUS</div>
+        <h4 class="carousel-title">ViX + Crunchyroll + Paramount+</h4>
+        <p class="carousel-desc">El paquete definitivo de novelas, deportes, anime y series exclusivas (1 Mes).</p>
+        <div class="carousel-price">$139 MXN <span style="font-size:0.8rem; text-decoration:line-through; color:#64748b;">$185</span></div>
+        <button class="carousel-btn" style="background: #3b82f6;" onclick="solicitarPromo(this)">Activar Combo</button>
+      </div>
+
+      <div class="carousel-card" style="background: linear-gradient(145deg, #3a1547, #150a1e); border-color: #722b8c;">
+        <div class="promo-badge" style="background: #d946ef;">HOGAR INTELIGENTE</div>
+        <h4 class="carousel-title">Canva Pro + ViX Premium + Edye</h4>
+        <p class="carousel-desc">Herramientas para ti y entretenimiento seguro para tu familia (1 Mes).</p>
+        <div class="carousel-price">$129 MXN <span style="font-size:0.8rem; text-decoration:line-through; color:#64748b;">$179</span></div>
+        <button class="carousel-btn" style="background: #d946ef;" onclick="solicitarPromo(this)">Activar Combo</button>
+      </div>
+
+      <div class="carousel-card" style="background: linear-gradient(145deg, #3f1313, #140f26); border-color: #7e2b2b;">
+        <div class="promo-badge" style="background: #ef4444;">POCAS CUENTAS</div>
+        <h4 class="carousel-title">Netflix Completa 4K (5 Perfiles)</h4>
+        <p class="carousel-desc">Cuenta exclusiva para ti y tu familia. Resolución UHD y sin anuncios.</p>
+        <div class="carousel-price">$295 MXN</div>
+        <button class="carousel-btn" style="background: #ef4444;" onclick="solicitarPromo(this)">Gestionar pedido</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="container" id="catalog"></div>
+  <div class="no-results" id="noResults">No se encontraron servicios.</div>
+  <div class="nu-banner">
+    <div class="logo-container" style="background:#fff; color:#820ad1; font-weight:900;">nu</div>
+    <div class="nu-text">
+      <h4>Transferencias SPEI a Nu México</h4>
+      <p>Solicita los datos de pago por WhatsApp. Confirmaremos tu pedido después de verificar el depósito.</p>
+      <button type="button" onclick="openModal('waModal')" style="margin-top:12px;padding:13px 18px;border:0;border-radius:12px;background:#820ad1;color:white;font-weight:bold;cursor:pointer;">
+        💜 Consultar pago con Nu
+      </button>
+    </div>
+  </div>
+
+  <footer>© 2026 Chars Stream Pro. Todos los derechos reservados.<br>Plataforma de alta fiabilidad en Veracruz, México.</footer>
+  
+  <div class="whatsapp-container" onclick="openModal('waModal')">
+    <img src="harvis.jpg" class="jazander-wa-btn" alt="Jazander Bot" onerror="this.style.display='none'">
+    <span class="wa-label">Pedir servicio</span>
+  </div>
+
+  <!-- MODAL HISTORIA -->
+  <div class="modal-overlay" id="historyModal" onclick="closeOnOutside(event, 'historyModal')">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('historyModal')">×</span>
+      <h2 style="text-align:center; color:#fff; margin-top:0;">CHARS STREAM PRO</h2>
+      <p style="text-align:center; color:var(--accent); font-weight:600; font-size:0.85rem; margin-top:-10px;">CONECTA CON LO PRO</p>
+      <img src="avatar.jpg" class="avatar-img" alt="Fundador" onerror="this.style.display='none'">
+      <h3 style="color:#fff; text-align:center; margin: 12px 0 0;">Ing. Carlos</h3>
+      <p style="color:var(--accent); text-align:center; margin: 0; font-size:0.9rem;">Arquitecto & Fundador</p>
+      <div style="margin-top:1.5rem; font-size:0.85rem; color:#cbd5e1; line-height:1.6;">
+        <h3 style="color:var(--accent); margin-bottom:0.3rem;">Visión y Evolución</h3>
+        Nacido en un dispositivo Android en Veracruz y escalado mediante terminales de Linux y scripts automatizados, Chars Stream Pro democratiza el acceso digital con atención 24/7. Seguimos creciendo integrando IA (JAZANDER) para ofrecer el mejor servicio.
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL FAQ / GARANTÍA -->
+  <div class="modal-overlay" id="faqModal" onclick="closeOnOutside(event, 'faqModal')">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('faqModal')">×</span>
+      <h2 style="color:#fff; margin-top:0;">Políticas y Garantía</h2>
+      <div style="font-size:0.9rem; color:#cbd5e1; line-height:1.6;">
+        <h3 style="color:var(--accent); margin-bottom:0.3rem;">🛡️ Garantía de 28 Días</h3>
+        <p>Todos nuestros servicios de streaming incluyen una garantía directa de 28 días de respaldo continuo. Si hay una caída, te lo reponemos.</p>
+        <h3 style="color:var(--accent); margin-bottom:0.3rem;">📱 Reglas del PIN Único</h3>
+        <p>Para cuentas compartidas, te asignaremos un Perfil con un PIN único. Queda estrictamente prohibido compartir credenciales, modificar contraseñas o entrar a otros perfiles. El incumplimiento cancela la garantía.</p>
+        <h3 style="color:var(--accent); margin-bottom:0.3rem;">⚡ Tiempos de Entrega</h3>
+        <p>Las entregas se realizan por WhatsApp tras confirmar tu pago. El tiempo promedio es de 10 a 30 minutos dentro de horarios hábiles.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL WHATSAPP -->
+  <div class="modal-overlay" id="waModal" onclick="closeOnOutside(event, 'waModal')">
+    <div class="modal-content" style="max-width: 350px;">
+      <span class="close-btn" onclick="closeModal('waModal')">×</span>
+      <h2 style="text-align:center; color:#fff; margin-top:0;">Contactar a Ventas</h2>
+      <p style="text-align:center; color:#94a3b8; margin-bottom: 2rem;">Elige tu asesor para generar tu pedido y recibir tus accesos:</p>
+      <a href="https://wa.me/525629780972?text=Hola,%20me%20interesa%20un%20servicio%20del%20catálogo" class="wa-btn">💬 Asesor 1 (56 2978 0972)</a>
+      <a href="https://wa.me/525639434114?text=Hola,%20me%20interesa%20un%20servicio%20del%20catálogo" class="wa-btn">💬 Asesor 2 (56 3943 4114)</a>
+    </div>
+  </div>
+
+<script>
+  function openModal(id) { document.getElementById(id).style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+  function closeModal(id) { document.getElementById(id).style.display = 'none'; document.body.style.overflow = 'auto'; }
+  function closeOnOutside(e, id) { if(e.target.id === id) closeModal(id); }
+  
+  const brandStyles = {
+    "netflix": { domain: null, bg: "linear-gradient(135deg, #e50914, #800000)", char: "N" },
+    "disney": { domain: null, bg: "linear-gradient(135deg, #001034, #0072d2)", char: "D+" },
+    "max": { domain: null, bg: "linear-gradient(135deg, #002be7, #00125e)", char: "M" },
+    "prime": { domain: null, bg: "linear-gradient(135deg, #00a8e1, #1a2332)", char: "P" },
+    "vix": { domain: null, bg: "linear-gradient(135deg, #ff4500, #8b1e00)", char: "V" },
+    "paramount": { domain: null, bg: "linear-gradient(135deg, #0054ff, #002266)", char: "P+" },
+    "crunchy": { domain: null, bg: "linear-gradient(135deg, #f47521, #cb5200)", char: "C" },
+    "youtube": { domain: null, bg: "linear-gradient(135deg, #ff0000, #b30000)", char: "YT" },
+    "spotify": { domain: null, bg: "linear-gradient(135deg, #1ed760, #136a30)", char: "S" },
+    "canva": { domain: null, bg: "linear-gradient(135deg, #00c4cc, #7d2ae8)", char: "C" },
+    "chatgpt": { domain: null, bg: "linear-gradient(135deg, #10a37f, #065440)", char: "AI" },
+    "microsoft": { domain: null, bg: "linear-gradient(135deg, #00a4ef, #f25022)", char: "M" },
+    "picsart": { domain: null, bg: "linear-gradient(135deg, #ff007f, #7f00ff)", char: "P" },
+    "capcut": { domain: null, bg: "linear-gradient(135deg, #000000, #2b2b2b)", char: "Cc" },
+    "nordvpn": { domain: null, bg: "linear-gradient(135deg, #4682b4, #1e3f66)", char: "N" },
+    "expressvpn": { domain: null, bg: "linear-gradient(135deg, #e71939, #8c0c1b)", char: "E" },
+    "tramite": { domain: null, bg: "linear-gradient(135deg, #8b5cf6, #3b0764)", char: "📄" }, 
+    "salud": { domain: null, bg: "linear-gradient(135deg, #10b981, #064e3b)", char: "🩺" },
+    "edu": { domain: null, bg: "linear-gradient(135deg, #f59e0b, #78350f)", char: "🎓" }, 
+    "auto": { domain: null, bg: "linear-gradient(135deg, #3b82f6, #1e3a8a)", char: "🚗" },
+    "casa": { domain: null, bg: "linear-gradient(135deg, #ec4899, #701a75)", char: "🏠" }, 
+    "negocio": { domain: null, bg: "linear-gradient(135deg, #eab308, #854d0e)", char: "💼" },
+    "ai": { domain: null, bg: "linear-gradient(135deg, #3b82f6, #1e3a8a)", char: "🤖" },
+    "def": { domain: null, bg: "linear-gradient(135deg, #a855f7, #581c87)", char: "⭐" }
+  };
+  function getBrandConfig(t, c) {
+    t = t.toLowerCase(); c = c.toLowerCase();
+    for (let k in brandStyles) { if (t.includes(k) && k!=="def" && k!=="tramite" && k!=="salud" && k!=="edu" && k!=="auto" && k!=="casa" && k!=="negocio" && k!=="ai") return brandStyles[k]; }
+    if (c.includes("trámite")) return brandStyles.tramite; if (c.includes("salud")) return brandStyles.salud;
+    if (c.includes("educación")) return brandStyles.edu; if (c.includes("auto")) return brandStyles.auto;
+    if (c.includes("infonavit")) return brandStyles.casa; if (c.includes("negocio") || c.includes("mayoreo")) return brandStyles.negocio;
+    if (c.includes("jazander")) return brandStyles.ai; return brandStyles.def;
+  }
+  const fullData1 = [
+    { c: "🎬 1. Plataformas de Streaming", i: [ 
+      "Netflix Cuenta Completa (5 Perfiles)|$295|Cuenta premium exclusiva con 5 pantallas.|GARANTÍA 28 DÍAS|🔥 POCAS CUENTAS",
+      "Netflix Premium (1 mes)|$95|Resolución 4K Ultra HD. 1 Perfil.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Netflix Estándar con anuncios (1 mes)|$59|Cuenta básica. Incluye pausas comerciales.|GARANTÍA 28 DÍAS|ECONÓMICO",
+      "Disney+ Premium (1 mes)|$99|Catálogo completo 4K.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Disney+ Premium (2 meses)|$149|Catálogo completo 4K.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Max Platino (1 mes)|$92|Catálogo Premium de Max y HBO.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Max Platino (2 meses)|$115|Catálogo Premium de Max y HBO.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Max Platino (3 meses)|$149|Catálogo Premium de Max y HBO.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Prime Video (1 mes)|$56|Mejores películas y envíos gratis.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Prime Video (2 meses)|$99|Mejores películas y envíos gratis.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Prime Video anual|$150|Mejores películas y envíos gratis.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "ViX Premium (1 mes)|$65|Telenovelas, películas y deportes.|GARANTÍA 28 DÍAS|OFERTA DISPONIBLE",
+      "ViX Premium (2 meses)|$89|Telenovelas, películas y deportes.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "ViX Premium (3 meses)|$130|Telenovelas, películas y deportes.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "ViX Premium (6 meses)|$179|Telenovelas, películas y deportes.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "ViX Premium anual|$199|Telenovelas, películas y deportes.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Paramount+|$49|Películas, series exclusivas y deportes.|GARANTÍA 28 DÍAS|OFERTA DISPONIBLE",
+      "Crunchyroll (1 mes)|$71|Todo el anime sin anuncios.|GARANTÍA 28 DÍAS|OFERTA DISPONIBLE",
+      "Crunchyroll (2 meses)|$97|Todo el anime sin anuncios.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Crunchyroll anual|$165|Todo el anime sin anuncios.|GARANTÍA 28 DÍAS|RENOVABLE",
+      "Peacock Premium (1 mes / completa)|$69|Grandes producciones y eventos.|GARANTÍA 28 DÍAS|CUENTA COMPLETA",
+      "Edye (1 mes / completa)|$39|Entretenimiento infantil educativo.|GARANTÍA 28 DÍAS|OFERTA DISPONIBLE",
+      "Plex|$89|Organización de contenidos multimedia.|GARANTÍA 28 DÍAS",
+      "Viki Rakuten|$77|El mejor entretenimiento asiático.|GARANTÍA 28 DÍAS",
+      "Universal+|$127|Grandes series e internacionales.|GARANTÍA 28 DÍAS",
+      "Pornhub Premium (1 mes)|$55|Acceso exclusivo en alta resolución.|PRIVACIDAD|GARANTÍA 28 DÍAS",
+      "Brazzers Premium (Perfil / 1 mes)|$55|Contenido premium privado.|PRIVACIDAD|GARANTÍA 28 DÍAS",
+      "IPTV|$75|Miles de canales de televisión en vivo.|GARANTÍA 28 DÍAS|MULTIDISPOSITIVO"
+    ]},
+    { c: "⚽ 2. Deportes", i: [
+      "DAZN|$125|La mayor plataforma de deportes en vivo.|GARANTÍA 28 DÍAS",
+      "Fox One|$127|Canales de Fox Sports.|GARANTÍA 28 DÍAS",
+      "NBA League Pass (1 mes / 1 disp)|$99|Partidos en vivo.|GARANTÍA 28 DÍAS|1 DISPOSITIVO",
+      "NBA League Pass (1 mes / 3 disp)|$149|Acceso completo.|GARANTÍA 28 DÍAS|3 PANTALLAS"
+    ]},
+    { c: "🎵 3. Música y Video", i: [
+      "Apple TV+ (1 mes)|$99|Historias originales.|GARANTÍA 28 DÍAS",
+      "Apple TV+ (3 meses)|$148|Historias originales.|GARANTÍA 28 DÍAS",
+      "YouTube Premium (1 mes)|$79|Videos sin anuncios.|GARANTÍA 28 DÍAS",
+      "YouTube Premium (2 meses)|$159|Videos sin anuncios.|GARANTÍA 28 DÍAS",
+      "YouTube Premium (3 meses)|$180|Videos sin anuncios.|GARANTÍA 28 DÍAS",
+      "YouTube Familiar|$200|Videos sin anuncios para la familia.|GARANTÍA 28 DÍAS|FAMILIAR",
+      "Spotify Premium (1 mes)|$69|Música sin interrupciones.|GARANTÍA 28 DÍAS",
+      "Spotify Premium (2 meses)|$138|Música sin interrupciones.|GARANTÍA 28 DÍAS",
+      "Spotify Premium (3 meses)|$165|Música sin interrupciones.|GARANTÍA 28 DÍAS",
+      "Spotify Familiar (6 perfiles)|$199|Música para todos.|GARANTÍA 28 DÍAS|FAMILIAR",
+      "Deezer (1 mes)|$69|Millones de canciones sin anuncios.|GARANTÍA 28 DÍAS",
+      "Deezer (2 meses)|$138|Millones de canciones sin anuncios.|GARANTÍA 28 DÍAS"
+    ]},
+    { c: "🪄 4. Aplicaciones y Herramientas", i: [
+      "Canva Pro (1 mes)|$75|Plantillas premium e IA.|GARANTÍA 28 DÍAS|OFERTA DISPONIBLE",
+      "Canva Pro (2 meses)|$149|Plantillas premium e IA.|GARANTÍA 28 DÍAS",
+      "Canva Pro (3 meses)|$180|Plantillas premium e IA.|GARANTÍA 28 DÍAS",
+      "Canva Pro (6 meses)|$250|Plantillas premium e IA.|GARANTÍA 28 DÍAS",
+      "Canva Pro anual|$299|Plantillas premium e IA.|GARANTÍA 28 DÍAS",
+      "Canva Pro (Invitación / 1 mes)|$49|Plantillas premium e IA.|GARANTÍA 28 DÍAS",
+      "ChatGPT Plus|$190|Acceso a GPT-4.|GARANTÍA 28 DÍAS|PRODUCTIVIDAD",
+      "Duolingo Plus|$74|Aprende idiomas sin anuncios.|GARANTÍA 28 DÍAS|EDUCACIÓN",
+      "Microsoft 365 (1 mes / 5 disp)|$112|Paquete Office.|GARANTÍA 28 DÍAS",
+      "Microsoft Office anual|$924|Paquete Office anual.|GARANTÍA 28 DÍAS",
+      "Picsart Pro (Completa / 1 mes)|$79|Edición avanzada.|GARANTÍA 28 DÍAS|CUENTA COMPLETA",
+      "Picsart (Acceso familiar / 1 mes)|$89|Edición avanzada compartida.|GARANTÍA 28 DÍAS|FAMILIAR",
+      "CapCut Pro (Completa / 1 mes)|$149|Edición de video profesional.|GARANTÍA 28 DÍAS|CUENTA COMPLETA",
+      "Adobe Express Premium (1 mes / 1 disp)|$69|Crea contenido rápido.|GARANTÍA 28 DÍAS",
+      "Configuración correo Outlook/Hotmail|$25|Creación y ajuste.|GESTIONADA"
+    ]},
+    { c: "🔐 5. VPN y Seguridad Digital", i: [
+      "PureVPN (1 mes)|$99|Protege tu privacidad.|GARANTÍA 28 DÍAS",
+      "NordVPN (1 mes / 1 disp)|$59|Red privada veloz.|GARANTÍA 28 DÍAS",
+      "NordVPN (3 meses / 1 disp)|$89|Red privada veloz.|GARANTÍA 28 DÍAS",
+      "NordVPN (3 meses / completa)|$199|Red privada veloz.|GARANTÍA 28 DÍAS|CUENTA COMPLETA",
+      "ExpressVPN (1 mes / celular)|$79|Desbloqueo de contenidos.|GARANTÍA 28 DÍAS",
+      "ExpressVPN (1 mes / PC)|$99|Desbloqueo de contenidos.|GARANTÍA 28 DÍAS",
+      "ExpressVPN (Anual / celular)|$249|Desbloqueo de contenidos.|GARANTÍA 28 DÍAS",
+      "ExpressVPN (Anual / PC)|$299|Desbloqueo de contenidos.|GARANTÍA 28 DÍAS",
+      "Bitdefender VPN Premium (1 mes / 1 disp)|$49|Navegación privada.|GARANTÍA 28 DÍAS",
+      "Bitdefender VPN Premium (1 mes / completa)|$79|Navegación privada.|GARANTÍA 28 DÍAS|CUENTA COMPLETA",
+      "Avira Phantom VPN Premium (3 meses / 1 disp)|$69|Navegación anónima.|GARANTÍA 28 DÍAS",
+      "Avira Phantom VPN Premium (3 meses / completa)|$99|Navegación anónima.|GARANTÍA 28 DÍAS|CUENTA COMPLETA",
+      "Surfshark VPN Premium (2 meses / 1 disp)|$79|Seguridad avanzada.|GARANTÍA 28 DÍAS"
+    ]}
+  ];
+  const fullData2 = [
+    { c: "📄 6. Trámites, Consultas e Identidad Digital", i: [
+      "RFC con IDCIF (Consulta y descarga)|$49|Descarga directa del SAT.|TRAMITADO|SEGURO",
+      "RFC (Copia informativa)|$69|Referencia informativa.|TRAMITADO",
+      "RFC Física (Apoyo 1ra inscripción)|$155|Gestión de inscripción.|TRAMITADO",
+      "RFC verificable (Constancia con QR)|$150|100% válida.|TRAMITADO",
+      "RFC (Gestión constancia oficial)|$270|Trámite sin complicaciones.|TRAMITADO",
+      "CURP (Consulta y descarga)|$15|Descargada al instante.|TRAMITADO",
+      "CURP (Copia informativa)|$45|Formato digital.|TRAMITADO",
+      "Edición de documento (No oficial)|$180|Ajustes visuales.|DISEÑO",
+      "Constancia de concubinato|$260|Obtención oficial.|TRAMITADO",
+      "Constancia de soltería / Inexistencia|$250|Trámite legal.|TRAMITADO",
+      "Inexistencia de matrimonio verificable|$270|Trámite legal.|TRAMITADO",
+      "Localización de AFORE|$35|Ubicamos tu administradora.|TRAMITADO",
+      "Recibo CFE actualizado|$35|Tu recibo digital.|TRAMITADO",
+      "NSS actualizado, 2 hojas|$60|Formato oficial.|TRAMITADO",
+      "Semanas cotizadas|$80|Historial laboral.|TRAMITADO",
+      "Vigencia de derechos|$75|Comprobante médico.|TRAMITADO",
+      "No derechohabiente ISSSTE / IMSS|$60|Documento oficial.|TRAMITADO",
+      "No derechohabiente IMSS|$60|Documento oficial.|TRAMITADO",
+      "No deudor alimenticio federal y CDMX|$65|Trámite padrón.|TRAMITADO",
+      "No deudor alimenticio Edomex|$60|Consulta deudor.|TRAMITADO",
+      "Antecedentes no penales estatal|$70|Validez estatal.|TRAMITADO",
+      "Antecedentes no penales federal|$95|Certificado federal.|TRAMITADO",
+      "Certificado de bautizo|$140|Registro de fe.|TRAMITADO",
+      "Papel de pláticas para bautizo|$150|Trámite ágil.|TRAMITADO",
+      "Certificados escolares y laborales|$70|Obtención rápida.|TRAMITADO",
+      "Acta oficial de nacimiento|$99|Válida para trámites.|TRAMITADO",
+      "Acta oficial de matrimonio|$119|Registro civil.|TRAMITADO",
+      "Acta oficial de divorcio|$129|Validez legal.|TRAMITADO",
+      "Acta oficial de defunción|$99|Gestión respetuosa.|TRAMITADO",
+      "Actas (Copia informativa)|$75|Consulta de apoyo.|TRAMITADO"
+    ]},
+    { c: "🩺 7. Servicios Médicos y Laboratorio", i: [
+      "Certificado médico IMSS / similares|$65|Para escuela o trabajo.|TRAMITADO",
+      "Ultrasonido 4D embarazo Salud Digna|$115|Citas y gestión.|TRAMITADO",
+      "Prueba de embarazo sanguínea|$60|Atención rápida.|TRAMITADO",
+      "Prueba COVID Salud Digna|$70|Programación de pruebas.|TRAMITADO",
+      "Prueba de dengue|$70|Seguimiento ágil.|TRAMITADO",
+      "Prueba antidoping Salud Digna|$70|Seguro y validado.|TRAMITADO",
+      "Solicitud de estudios de lab IMSS|$75|Gestión asistida.|TRAMITADO",
+      "Valoración de cardiología|$75|Citas especializadas.|TRAMITADO",
+      "Receta de laboratorio IMSS|$75|Gestión asistida.|TRAMITADO",
+      "Referencia / contrarreferencia IMSS|$75|Movimiento unidades.|TRAMITADO",
+      "Triage de urgencias|$75|Ingreso en urgencias.|TRAMITADO",
+      "Urgencias ISSSTE|$85|Apoyo urgente.|TRAMITADO",
+      "Incapacidad ISSSTE|$85|Gestión de reposos.|TRAMITADO",
+      "Receta médica para valoración|$65|Atención personalizada.|TRAMITADO",
+      "Incapacidad IMSS|$80|Incapacidades laborales.|TRAMITADO",
+      "Prueba de Influenza IMSS|$65|Estudios ágiles.|TRAMITADO"
+    ]},
+    { c: "🎓 8. Educación y Certificados", i: [
+      "Registro y acompañamiento INEA|$69|Estudios básicos.|TRAMITADO",
+      "Certificado de Primaria INEA|$99|Documento oficial.|TRAMITADO",
+      "Certificado de Secundaria INEA|$99|Certificado oficial.|TRAMITADO",
+      "Certificado / duplicado de Preparatoria|$149 + derechos|Validaciones oficiales.|TRAMITADO",
+      "Consulta de Título Profesional|$49|Búsqueda oficial.|TRAMITADO",
+      "Consulta de Cédula Profesional|$49|Verificación.|TRAMITADO"
+    ]},
+    { c: "🚗 9. Servicios Automotrices", i: [
+      "Permiso Provisional Circular (Guerrero)|$120 + derechos|Permiso temporal.|TRAMITADO"
+    ]},
+    { c: "🏠 10. INFONAVIT", i: [
+      "Consulta de Historial Laboral INFONAVIT|$49|Relaciones laborales.|TRAMITADO",
+      "Consulta de Datos de Cuenta INFONAVIT|$49|Detalles de tu cuenta.|TRAMITADO",
+      "Consulta de Saldo INFONAVIT|$35|Tus ahorros.|TRAMITADO",
+      "Registro de Mi Cuenta INFONAVIT|$69|Creación fácil.|TRAMITADO",
+      "Historial de Movimientos / Saldos INFONAVIT|$49|Ahorros al día.|TRAMITADO",
+      "Recuperación o cambio de clave INFONAVIT|$69|Acceso rápido.|TRAMITADO",
+      "Desbloqueo y recuperación de acceso INFONAVIT|$79|Soluciones completas.|TRAMITADO"
+    ]},
+    { c: "💼 11. ¿Quieres iniciar tu negocio?", i: [
+      "Paneles de Venta Múltiple|Consultar precio|Inicia tu propio negocio administrando plataformas y clientes.|EMPRENDEDOR|SOPORTE PREMIUM"
+    ]},
+    { c: "🤖 JAZANDER | Inteligencia Artificial", i: [
+      "Asistencia Automatizada JAZANDER|24/7|Consulta precios, disponibilidad, y orientación sobre servicios.|INNOVACIÓN",
+      "Implementación de IA para Negocios|Consultar|Desarrollamos bots personalizados para tu negocio.|DESARROLLO|IA"
+    ]}
+  ];
+  
+  const allCatalogData = fullData1.concat(fullData2);
+  let filterOfertaActive = false;
+  function toggleDetails(element) { 
+    
+    element.classList.toggle('open'); 
+  }
+  
+  function filterOfertas() {
+    filterOfertaActive = !filterOfertaActive;
+    let btn = document.querySelector('.action-btn.ofertas');
+    if(filterOfertaActive) { btn.style.background = '#ef4444'; btn.style.color = '#fff'; renderCatalog("OFERTA DISPONIBLE");
+    } else { btn.style.background = 'transparent'; btn.style.color = '#ef4444'; renderCatalog(); }
+  }
+
+  function renderCatalog(filterText = "") {
+    let html = "", hasResults = false; const term = filterText.toLowerCase();
+    const carousel = document.getElementById('promoCarousel');
+    if (carousel) { carousel.style.display = term.length > 0 ? 'none' : 'block'; }
+
+    allCatalogData.forEach(cat => {
+      let filteredItems = cat.i.filter(item => item.toLowerCase().includes(term));
+      if (filteredItems.length > 0) {
+        hasResults = true; html += `<div class="category"><h2>${cat.c}</h2>`;
+        filteredItems.forEach(item => {
+          let p = item.split('|'), brand = getBrandConfig(p[0], cat.c), desc = p[2] ? p[2] : "Toca el botón de WhatsApp abajo para consultar requisitos.";
+          let logoHtml = "";
+          if (brand.domain) { logoHtml = `<img src="https://icon.horse/icon/${brand.domain}" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="logo-container" style="background: ${brand.bg}; display:none;">${brand.char}</div>`;
+              logoHtml = `<div class="logo-container" style="background: ${brand.bg};">${brand.char}</div>`;
+          }
+          let badgeHtml = "", benefitsHtml = "";
+          if (p.length > 3) {
+            badgeHtml += `<div class="badge-container">`;
+            for (let i = 3; i < p.length; i++) {
+              let badgeClass = "", tag = p[i].trim();
+              if (tag.includes("GARANTÍA") || tag.includes("PRIVACIDAD") || tag.includes("SEGURO") || tag.includes("TRAMITADO") || tag.includes("VIP")) badgeClass = "garantia";
+              else if (tag.includes("COMPARTIDO") || tag.includes("COMPLETA") || tag.includes("DISPOSITIVO") || tag.includes("PANTALLA")) badgeClass = "acceso";
+              else if (tag.includes("POCAS CUENTAS") || tag.includes("OFERTA")) badgeClass = "urgencia";
+              badgeHtml += `<span class="badge ${badgeClass}">${tag}</span>`;
+              if(!tag.includes("POCAS") && !tag.includes("OFERTA")) benefitsHtml += `<li>${tag}</li>`;
+            }
+            badgeHtml += `</div>`;
+          }
+          html += `<div class="item" onclick="toggleDetails(this)">
+                    <div class="item-header">${logoHtml}<div class="item-info"><div class="item-title">${p[0]}</div><div class="item-price">${p[1]}</div>${badgeHtml}</div><div class="chevron">▼</div></div>
+                    <div class="item-details">${desc}<ul class="benefits-list" style="margin-top: 1rem;">${benefitsHtml}</ul></div>
+                  </div>`;
+        }); html += `</div>`;
+      }
+    });
+    document.getElementById('catalog').innerHTML = html;
+
+    /* CHARS EVENTOS CATALOGO V1 */
+    document.getElementById("catalog").dispatchEvent(
+      new Event("chars:catalogo-renderizado")
+    );
+
+    document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
+  }
+  function filterServices() { filterOfertaActive=false; document.querySelector('.action-btn.ofertas').style.background='transparent'; document.querySelector('.action-btn.ofertas').style.color='#ef4444'; const input = document.getElementById('searchInput').value; renderCatalog(input); }
+  renderCatalog();
+</script>
+
+<script>
+document.addEventListener("click", function(event) {
+  const boton = event.target.closest(".chars-fast-btn");
+  if (!boton) return;
+
+  const numero = Number(boton.dataset.cat);
+  const buscador = document.querySelector(".search-bar");
+
+  if (buscador && buscador.value.trim()) {
+    buscador.value = "";
+    buscador.dispatchEvent(
+      new Event("input", { bubbles: true })
+    );
+    buscador.dispatchEvent(
+      new Event("keyup", { bubbles: true })
+    );
+  }
+
+  setTimeout(function() {
+    const categorias = document.querySelectorAll(
+      "#catalog .category"
+    );
+
+    const destino = categorias[numero];
+
+    if (destino) {
+      destino.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    } else {
+      alert("Categoria no encontrada en el catalogo.");
+    }
+  }, 100);
+});
+</script>
+
+
+<script>
+(function () {
+  const catalogo = document.getElementById("catalog");
+  const modal = document.getElementById("waModal");
+
+  if (!catalogo || !modal) return;
+
+  const asesores = Array.from(
+    modal.querySelectorAll("a.wa-btn")
+  );
+
+  const enlacesOriginales = asesores.map(
+    enlace => enlace.href
+  );
+
+  const resumen = document.createElement("div");
+  resumen.className = "chars-order-summary";
+  resumen.hidden = true;
+  resumen.style.display = "none";
+
+  const primerAsesor = asesores[0];
+  if (primerAsesor) {
+    primerAsesor.before(resumen);
+  }
+
+  function restaurarPedido() {
+    asesores.forEach((enlace, i) => {
+      enlace.href = enlacesOriginales[i];
+    });
+
+    resumen.textContent = "";
+    resumen.hidden = true;
+    resumen.style.display = "none";
+  }
+
+  function prepararPedido(nombre, precio) {
+    const mensaje =
+      "Hola, quiero solicitar " +
+      nombre + " por " + precio +
+      " MXN. ¿Está disponible? " +
+      "Quiero pagar por transferencia SPEI a Nu México. " +
+      "Por favor envíenme las instrucciones de pago. " +
+      "Después enviaré mi comprobante por este WhatsApp. " +
+      "El pedido se confirmará al verificar el depósito.";
+
+    asesores.forEach((enlace, i) => {
+      const base = enlacesOriginales[i].split("?")[0];
+      enlace.href =
+        base + "?text=" + encodeURIComponent(mensaje);
+    });
+
+    resumen.textContent =
+      "🛒 Pedido: " + nombre + " — " + precio;
+
+    resumen.hidden = false;
+    resumen.style.display = "block";
+  }
+
+  function agregarBotones() {
+    catalogo.querySelectorAll(".item").forEach(item => {
+      const detalles = item.querySelector(".item-details");
+
+      if (!detalles ||
+          detalles.querySelector(".chars-order-btn")) {
+        return;
+      }
+
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-order-btn";
+      boton.textContent = "🛒 Solicitar este servicio";
+
+      detalles.appendChild(boton);
+    });
+  }
+
+  agregarBotones();
+
+  const observer = new MutationObserver(agregarBotones);
+  observer.observe(catalogo, {
+    childList: true
+  });
+
+  document.addEventListener("click", function(event) {
+    const boton = event.target.closest(
+      ".chars-order-btn"
+    );
+
+    if (boton) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const tarjeta = boton.closest(".item");
+
+      const nombre = tarjeta.querySelector(
+        ".item-title"
+      )?.textContent.trim() || "Servicio";
+
+      const precio = tarjeta.querySelector(
+        ".item-price"
+      )?.textContent.trim() || "Precio a consultar";
+
+      prepararPedido(nombre, precio);
+      openModal("waModal");
+      return;
+    }
+
+    if (event.target.closest(
+      ".whatsapp-container, .carousel-card .carousel-btn"
+    )) {
+      restaurarPedido();
+    }
+  }, true);
+})();
+</script>
+
+
+<script>
+/* CHARS PEDIDOS COMBOS V1 */
+
+function solicitarPromo(boton) {
+
+  const tarjeta = boton.closest(".carousel-card");
+  const modal = document.getElementById("waModal");
+
+  if (!tarjeta || !modal) return;
+
+  const nombre = tarjeta.querySelector(
+    ".carousel-title"
+  )?.textContent.trim() || "Promocion";
+
+  const textoPrecio = tarjeta.querySelector(
+    ".carousel-price"
+  )?.textContent || "";
+
+  const precioEncontrado = textoPrecio.match(
+    /\$\s*[\d.,]+(?:\s*MXN)?/i
+  );
+
+  const precio = precioEncontrado
+    ? precioEncontrado[0].trim()
+    : "precio a consultar";
+
+  const esCombo = boton.textContent.includes("Combo");
+
+  const mensaje =
+    "Hola, quiero solicitar " +
+    (esCombo ? "el combo " : "") +
+    nombre + " por " + precio +
+    ". ¿Esta disponible?";
+
+  const resumen = modal.querySelector(
+    ".chars-order-summary"
+  );
+
+  if (resumen) {
+    resumen.textContent =
+      "🛒 Pedido: " + nombre + " — " + precio;
+    resumen.hidden = false;
+    resumen.style.display = "block";
+  }
+
+  modal.querySelectorAll("a.wa-btn").forEach(enlace => {
+    const base = enlace.href.split("?")[0];
+
+    enlace.href = base + "?text=" +
+      encodeURIComponent(mensaje);
+  });
+
+  openModal("waModal");
+}
+</script>
+
+
+<script>
+(function() {
+  const harvis = document.querySelector(
+    ".whatsapp-container"
+  );
+
+  if (!harvis) return;
+
+  let anterior = window.scrollY;
+  let acumulado = 0;
+  let direccionAnterior = 0;
+
+  window.addEventListener("scroll", function() {
+    const actual = window.scrollY;
+    const diferencia = actual - anterior;
+
+    anterior = actual;
+
+    if (window.innerWidth > 600 || actual < 150) {
+      harvis.classList.remove(
+        "chars-harvis-hidden"
+      );
+      acumulado = 0;
+      return;
+    }
+
+    const direccion = Math.sign(diferencia);
+
+    if (direccion === 0) return;
+
+    if (direccion !== direccionAnterior) {
+      acumulado = 0;
+    }
+
+    direccionAnterior = direccion;
+    acumulado += Math.abs(diferencia);
+
+    if (acumulado >= 25) {
+      harvis.classList.toggle(
+        "chars-harvis-hidden",
+        direccion > 0
+      );
+      acumulado = 0;
+    }
+
+  }, { passive: true });
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR DISNEY V1 */
+(function() {
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  function agruparDisney() {
+    const tarjetas = Array.from(
+      catalogo.querySelectorAll(".item")
+    ).filter(tarjeta => {
+      const nombre = tarjeta.querySelector(
+        ".item-title"
+      )?.textContent.trim() || "";
+
+      return /^Disney\+ Premium \((1 mes|2 meses)\)$/.test(nombre);
+    });
+
+    if (tarjetas.length !== 2) return;
+
+    if (tarjetas[0].closest(".category") !==
+        tarjetas[1].closest(".category")) return;
+
+    const planes = tarjetas.map(tarjeta => ({
+      nombre: tarjeta.querySelector(
+        ".item-title"
+      ).textContent.trim(),
+      precio: tarjeta.querySelector(
+        ".item-price"
+      ).textContent.trim()
+    }));
+
+    planes.sort((a, b) =>
+      a.nombre.includes("(1 mes)") ? -1 : 1
+    );
+
+    const principal = tarjetas.find(t =>
+      t.querySelector(".item-title")
+       .textContent.trim() === planes[0].nombre
+    );
+
+    const secundaria = tarjetas.find(
+      t => t !== principal
+    );
+
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!detalles) return;
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    planes.forEach((plan, indice) => {
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+
+      const duracion = plan.nombre.match(/\(([^)]+)\)$/)[1];
+
+      boton.textContent = duracion + " — " + plan.precio;
+
+      boton.addEventListener("click", function(event) {
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+      });
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+      } else {
+        boton.setAttribute("aria-pressed", "false");
+      }
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+    });
+
+    selector.appendChild(opciones);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(selector, pedir || null);
+
+    secundaria.remove();
+  }
+
+  agruparDisney();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparDisney);
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR MAX V1 */
+(function() {
+
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const nombres = [
+    "Max Platino (1 mes)",
+    "Max Platino (2 meses)",
+    "Max Platino (3 meses)"
+  ];
+
+  function agruparMax() {
+
+    const todas = Array.from(
+      catalogo.querySelectorAll(".item")
+    );
+
+    const tarjetas = nombres.map(nombre =>
+      todas.find(tarjeta =>
+        tarjeta.querySelector(".item-title")
+          ?.textContent.trim() === nombre
+      )
+    );
+
+    if (tarjetas.some(t => !t)) return;
+
+    if (!tarjetas.every(t =>
+      t.parentElement === tarjetas[0].parentElement
+    )) return;
+
+    const principal = tarjetas[0];
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!titulo || !precio || !detalles) return;
+
+    if (detalles.querySelector(".chars-plan-picker")) return;
+
+    const planes = tarjetas.map((tarjeta, i) => ({
+      nombre: nombres[i],
+      duracion: i === 0 ? "1 mes" : (i + 1) + " meses",
+      precio: tarjeta.querySelector(".item-price")
+        .textContent.trim()
+    }));
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    planes.forEach((plan, indice) => {
+
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+      boton.textContent =
+        plan.duracion + " — " + plan.precio;
+
+      boton.setAttribute(
+        "aria-pressed",
+        indice === 0 ? "true" : "false"
+      );
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.addEventListener("click", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+
+    });
+
+    selector.appendChild(opciones);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(selector, pedir || null);
+
+    tarjetas.slice(1).forEach(t => t.remove());
+  }
+
+  agruparMax();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparMax);
+
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR VIX V1 */
+
+(function() {
+
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const nombres = [
+    "ViX Premium (1 mes)",
+    "ViX Premium (2 meses)",
+    "ViX Premium (3 meses)",
+    "ViX Premium (6 meses)",
+    "ViX Premium anual"
+  ];
+
+  const duraciones = [
+    "1 mes",
+    "2 meses",
+    "3 meses",
+    "6 meses",
+    "Anual"
+  ];
+
+  function agruparViX() {
+
+    const todas = Array.from(
+      catalogo.querySelectorAll(".item")
+    );
+
+    const tarjetas = nombres.map(nombre =>
+      todas.find(tarjeta =>
+        tarjeta.querySelector(".item-title")
+          ?.textContent.trim() === nombre
+      )
+    );
+
+    if (tarjetas.some(t => !t)) return;
+
+    const mismoPadre = tarjetas.every(t =>
+      t.parentElement === tarjetas[0].parentElement
+    );
+
+    if (!mismoPadre) return;
+
+    const principal = tarjetas[0];
+
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!titulo || !precio || !detalles) return;
+
+    if (detalles.querySelector(".chars-plan-picker")) {
+      return;
+    }
+
+    const planes = tarjetas.map((tarjeta, i) => ({
+      nombre: nombres[i],
+      duracion: duraciones[i],
+      precio: tarjeta.querySelector(".item-price")
+        .textContent.trim(),
+      etiquetas: tarjeta.querySelector(
+        ".badge-container"
+      )?.cloneNode(true),
+      beneficios: tarjeta.querySelector(
+        ".benefits-list"
+      )?.cloneNode(true)
+    }));
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    planes.forEach((plan, indice) => {
+
+      const boton = document.createElement("button");
+
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+
+      boton.textContent =
+        plan.duracion + " — " + plan.precio;
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.setAttribute(
+        "aria-pressed",
+        indice === 0 ? "true" : "false"
+      );
+
+      boton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        const etiquetasActuales = principal.querySelector(
+          ".badge-container"
+        );
+
+        if (etiquetasActuales && plan.etiquetas) {
+          etiquetasActuales.replaceWith(
+            plan.etiquetas.cloneNode(true)
+          );
+        }
+
+        const beneficiosActuales = detalles.querySelector(
+          ".benefits-list"
+        );
+
+        if (beneficiosActuales && plan.beneficios) {
+          beneficiosActuales.replaceWith(
+            plan.beneficios.cloneNode(true)
+          );
+        }
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+
+    });
+
+    selector.appendChild(opciones);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(
+      selector,
+      pedir || null
+    );
+
+    tarjetas.slice(1).forEach(t => t.remove());
+
+  }
+
+  agruparViX();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparViX);
+
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR PRIME V1 */
+
+(function() {
+
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const nombres = [
+    "Prime Video (1 mes)",
+    "Prime Video (2 meses)",
+    "Prime Video anual"
+  ];
+
+  const duraciones = [
+    "1 mes",
+    "2 meses",
+    "Anual"
+  ];
+
+  function agruparPrime() {
+
+    const todas = Array.from(
+      catalogo.querySelectorAll(".item")
+    );
+
+    const tarjetas = nombres.map(nombre =>
+      todas.find(tarjeta =>
+        tarjeta.querySelector(".item-title")
+          ?.textContent.trim() === nombre
+      )
+    );
+
+    if (tarjetas.some(t => !t)) return;
+
+    if (!tarjetas.every(t =>
+      t.parentElement === tarjetas[0].parentElement
+    )) return;
+
+    const principal = tarjetas[0];
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!titulo || !precio || !detalles) return;
+
+    if (detalles.querySelector(".chars-plan-picker")) {
+      return;
+    }
+
+    const planes = tarjetas.map((tarjeta, i) => ({
+      nombre: nombres[i],
+      duracion: duraciones[i],
+      precio: tarjeta.querySelector(".item-price")
+        .textContent.trim(),
+
+      etiquetas: tarjeta.querySelector(
+        ".badge-container"
+      )?.cloneNode(true),
+
+      beneficios: tarjeta.querySelector(
+        ".benefits-list"
+      )?.cloneNode(true)
+    }));
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    planes.forEach((plan, indice) => {
+
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+
+      boton.textContent =
+        plan.duracion + " — " + plan.precio;
+
+      boton.setAttribute(
+        "aria-pressed",
+        indice === 0 ? "true" : "false"
+      );
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        const etiquetasActuales =
+          principal.querySelector(".badge-container");
+
+        if (etiquetasActuales && plan.etiquetas) {
+          etiquetasActuales.replaceWith(
+            plan.etiquetas.cloneNode(true)
+          );
+        }
+
+        const beneficiosActuales =
+          detalles.querySelector(".benefits-list");
+
+        if (beneficiosActuales && plan.beneficios) {
+          beneficiosActuales.replaceWith(
+            plan.beneficios.cloneNode(true)
+          );
+        }
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+    });
+
+    selector.appendChild(opciones);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(selector, pedir || null);
+
+    tarjetas.slice(1).forEach(t => t.remove());
+  }
+
+  agruparPrime();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparPrime);
+
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR CRUNCHYROLL V1 */
+
+(function() {
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const datos = [{"nombre": "Crunchyroll (1 mes)", "duracion": "1 mes"}, {"nombre": "Crunchyroll (2 meses)", "duracion": "2 meses"}, {"nombre": "Crunchyroll anual", "duracion": "Anual"}];
+
+  function agruparCrunchyroll() {
+    const todas = Array.from(
+      catalogo.querySelectorAll(".item")
+    );
+
+    const tarjetas = datos.map(plan =>
+      todas.find(t =>
+        t.querySelector(".item-title")
+          ?.textContent.trim() === plan.nombre
+      )
+    );
+
+    if (tarjetas.some(t => !t)) return;
+
+    if (!tarjetas.every(t =>
+      t.parentElement === tarjetas[0].parentElement
+    )) return;
+
+    const principal = tarjetas[0];
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!titulo || !precio || !detalles) return;
+    if (detalles.querySelector(".chars-plan-picker")) return;
+
+    const planes = tarjetas.map((tarjeta, i) => ({
+      nombre: datos[i].nombre,
+      duracion: datos[i].duracion,
+      precio: tarjeta.querySelector(".item-price")
+        .textContent.trim(),
+      etiquetas: tarjeta.querySelector(
+        ".badge-container"
+      )?.cloneNode(true),
+      beneficios: tarjeta.querySelector(
+        ".benefits-list"
+      )?.cloneNode(true)
+    }));
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    planes.forEach((plan, indice) => {
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+      boton.textContent =
+        plan.duracion + " — " + plan.precio;
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.setAttribute(
+        "aria-pressed",
+        indice === 0 ? "true" : "false"
+      );
+
+      boton.addEventListener("click", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        const etiquetasActuales =
+          principal.querySelector(".badge-container");
+
+        if (etiquetasActuales) {
+          if (plan.etiquetas) {
+            etiquetasActuales.replaceWith(
+              plan.etiquetas.cloneNode(true)
+            );
+          } else {
+            etiquetasActuales.remove();
+          }
+        }
+
+        const beneficiosActuales =
+          detalles.querySelector(".benefits-list");
+
+        if (beneficiosActuales && plan.beneficios) {
+          beneficiosActuales.replaceWith(
+            plan.beneficios.cloneNode(true)
+          );
+        }
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+    });
+
+    selector.appendChild(opciones);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(selector, pedir || null);
+
+    tarjetas.slice(1).forEach(t => t.remove());
+  }
+
+  agruparCrunchyroll();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparCrunchyroll);
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR SPOTIFY V1 */
+
+(function() {
+
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const nombres = [
+    "Spotify Premium (1 mes)",
+    "Spotify Premium (2 meses)",
+    "Spotify Premium (3 meses)",
+    "Spotify Familiar (6 perfiles)"
+  ];
+
+  const duraciones = [
+    "1 mes",
+    "2 meses",
+    "3 meses",
+    "Familiar (6 perfiles)"
+  ];
+
+  function agruparSpotify() {
+
+    const todas = Array.from(
+      catalogo.querySelectorAll(".item")
+    );
+
+    const tarjetas = nombres.map(nombre =>
+      todas.find(t =>
+        t.querySelector(".item-title")
+          ?.textContent.trim() === nombre
+      )
+    );
+
+    if (tarjetas.some(t => !t)) return;
+
+    if (!tarjetas.every(t =>
+      t.parentElement === tarjetas[0].parentElement
+    )) return;
+
+    const principal = tarjetas[0];
+
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!titulo || !precio || !detalles) return;
+
+    if (detalles.querySelector(".chars-plan-picker")) return;
+
+    const planes = tarjetas.map((tarjeta, i) => {
+
+      const detalle = tarjeta.querySelector(".item-details");
+
+      const descripcion = Array.from(
+        detalle.childNodes
+      ).find(n =>
+        n.nodeType === 3 && n.textContent.trim()
+      )?.textContent.trim() || "";
+
+      return {
+        nombre: nombres[i],
+        duracion: duraciones[i],
+        precio: tarjeta.querySelector(".item-price")
+          .textContent.trim(),
+
+        descripcion: descripcion,
+
+        etiquetas: tarjeta.querySelector(
+          ".badge-container"
+        )?.cloneNode(true),
+
+        beneficios: tarjeta.querySelector(
+          ".benefits-list"
+        )?.cloneNode(true)
+      };
+    });
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    const aviso = document.createElement("p");
+    aviso.style.cssText =
+      "font-size:0.75rem;color:#c4b5fd;margin:12px 0 0;display:none";
+
+    aviso.textContent =
+      "Plan Familiar: confirma los requisitos de " +
+      "domicilio y elegibilidad del proveedor.";
+
+    planes.forEach((plan, indice) => {
+
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+
+      boton.textContent =
+        plan.duracion + " — " + plan.precio;
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.setAttribute(
+        "aria-pressed",
+        indice === 0 ? "true" : "false"
+      );
+
+      boton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        const textoDescripcion = Array.from(
+          detalles.childNodes
+        ).find(n =>
+          n.nodeType === 3 && n.textContent.trim()
+        );
+
+        if (textoDescripcion) {
+          textoDescripcion.textContent =
+            plan.descripcion + " ";
+        }
+
+        const etiquetasActuales =
+          principal.querySelector(".badge-container");
+
+        if (etiquetasActuales) {
+          if (plan.etiquetas) {
+            etiquetasActuales.replaceWith(
+              plan.etiquetas.cloneNode(true)
+            );
+          } else {
+            etiquetasActuales.remove();
+          }
+        } else if (plan.etiquetas) {
+          precio.after(
+            plan.etiquetas.cloneNode(true)
+          );
+        }
+
+        const beneficiosActuales =
+          detalles.querySelector(".benefits-list");
+
+        if (beneficiosActuales) {
+          if (plan.beneficios) {
+            beneficiosActuales.replaceWith(
+              plan.beneficios.cloneNode(true)
+            );
+          } else {
+            beneficiosActuales.remove();
+          }
+        }
+
+        aviso.style.display =
+          indice === 3 ? "block" : "none";
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+
+    });
+
+    selector.appendChild(opciones);
+    selector.appendChild(aviso);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(
+      selector,
+      pedir || null
+    );
+
+    tarjetas.slice(1).forEach(t => t.remove());
+
+  }
+
+  agruparSpotify();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparSpotify);
+
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTOR YOUTUBE V1 */
+
+(function() {
+
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const nombres = [
+    "YouTube Premium (1 mes)",
+    "YouTube Premium (2 meses)",
+    "YouTube Premium (3 meses)",
+    "YouTube Familiar"
+  ];
+
+  const duraciones = [
+    "1 mes",
+    "2 meses",
+    "3 meses",
+    "Familiar"
+  ];
+
+  function agruparYouTube() {
+
+    const todas = Array.from(
+      catalogo.querySelectorAll(".item")
+    );
+
+    const tarjetas = nombres.map(nombre =>
+      todas.find(t =>
+        t.querySelector(".item-title")
+          ?.textContent.trim() === nombre
+      )
+    );
+
+    if (tarjetas.some(t => !t)) return;
+
+    if (!tarjetas.every(t =>
+      t.parentElement === tarjetas[0].parentElement
+    )) return;
+
+    const principal = tarjetas[0];
+    const titulo = principal.querySelector(".item-title");
+    const precio = principal.querySelector(".item-price");
+    const detalles = principal.querySelector(".item-details");
+
+    if (!titulo || !precio || !detalles) return;
+
+    if (detalles.querySelector(".chars-plan-picker")) {
+      return;
+    }
+
+    const planes = tarjetas.map((tarjeta, i) => {
+      const detalle = tarjeta.querySelector(".item-details");
+
+      const descripcion = Array.from(
+        detalle.childNodes
+      ).find(n =>
+        n.nodeType === 3 && n.textContent.trim()
+      )?.textContent.trim() || "";
+
+      return {
+        nombre: nombres[i],
+        duracion: duraciones[i],
+        precio: tarjeta.querySelector(".item-price")
+          .textContent.trim(),
+        descripcion,
+
+        etiquetas: tarjeta.querySelector(
+          ".badge-container"
+        )?.cloneNode(true),
+
+        beneficios: tarjeta.querySelector(
+          ".benefits-list"
+        )?.cloneNode(true)
+      };
+    });
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const etiqueta = document.createElement("div");
+    etiqueta.className = "chars-plan-label";
+    etiqueta.textContent = "Elige tu plan:";
+
+    selector.appendChild(etiqueta);
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    const aviso = document.createElement("p");
+    aviso.style.cssText =
+      "font-size:0.75rem;color:#c4b5fd;" +
+      "margin:12px 0 0;display:none";
+
+    aviso.textContent =
+      "Plan Familiar: verifica los requisitos " +
+      "de domicilio y elegibilidad del proveedor.";
+
+    planes.forEach((plan, indice) => {
+
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+
+      boton.textContent =
+        plan.duracion + " — " + plan.precio;
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.setAttribute(
+        "aria-pressed",
+        indice === 0 ? "true" : "false"
+      );
+
+      boton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        const texto = Array.from(
+          detalles.childNodes
+        ).find(n =>
+          n.nodeType === 3 && n.textContent.trim()
+        );
+
+        if (texto) {
+          texto.textContent = plan.descripcion + " ";
+        }
+
+        const etiquetasActuales =
+          principal.querySelector(".badge-container");
+
+        const info = principal.querySelector(".item-info");
+
+        if (etiquetasActuales) {
+          if (plan.etiquetas) {
+            etiquetasActuales.replaceWith(
+              plan.etiquetas.cloneNode(true)
+            );
+          } else {
+            etiquetasActuales.remove();
+          }
+        } else if (plan.etiquetas && info) {
+          info.appendChild(
+            plan.etiquetas.cloneNode(true)
+          );
+        }
+
+        const beneficiosActuales =
+          detalles.querySelector(".benefits-list");
+
+        if (beneficiosActuales && plan.beneficios) {
+          beneficiosActuales.replaceWith(
+            plan.beneficios.cloneNode(true)
+          );
+        }
+
+        aviso.style.display =
+          indice === 3 ? "block" : "none";
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute("aria-pressed", "false");
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute("aria-pressed", "true");
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+    });
+
+    selector.appendChild(opciones);
+    selector.appendChild(aviso);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(
+      selector,
+      pedir || null
+    );
+
+    tarjetas.slice(1).forEach(t => t.remove());
+  }
+
+  agruparYouTube();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", agruparYouTube);
+
+})();
+</script>
+
+
+<script>
+/* CHARS SELECTORES RESTANTES V1 */
+
+(() => {
+
+  const catalogo = document.getElementById("catalog");
+  if (!catalogo) return;
+
+  const familias = [
+    {nombre:"Apple TV+", re:/^Apple\s*TV\+/i},
+    {nombre:"Deezer", re:/^Deezer\b/i},
+    {nombre:"Canva Pro", re:/^Canva\s+Pro\b/i},
+    {nombre:"NordVPN", re:/^Nord\s*VPN\b/i},
+    {nombre:"ExpressVPN", re:/^Express\s*VPN\b/i},
+    {nombre:"Bitdefender VPN",
+     re:/^Bitdefender\s+VPN\b/i},
+    {nombre:"Avira Phantom VPN",
+     re:/^Avira\s+Phantom\s+VPN\b/i},
+    {nombre:"Surfshark VPN",
+     re:/^Surfshark\s+VPN\b/i},
+    {nombre:"NBA League Pass",
+     re:/^NBA\s+League\s+Pass\b/i}
+  ];
+
+  function obtenerDescripcion(detalles) {
+    const nodo = Array.from(detalles.childNodes)
+      .find(n =>
+        n.nodeType === Node.TEXT_NODE &&
+        n.textContent.trim()
+      );
+
+    return nodo ? nodo.textContent : "";
+  }
+
+  function agruparFamilia(familia, categoria) {
+
+    const tarjetas = Array.from(
+      categoria.children
+    ).filter(el => {
+
+      if (!el.classList.contains("item")) {
+        return false;
+      }
+
+      const nombre = el.querySelector(
+        ".item-title"
+      )?.textContent.trim() || "";
+
+      return familia.re.test(nombre);
+    });
+
+    if (tarjetas.length < 2) return;
+
+    const principal = tarjetas[0];
+
+    const detalles = principal.querySelector(
+      ".item-details"
+    );
+
+    const titulo = principal.querySelector(
+      ".item-title"
+    );
+
+    const precio = principal.querySelector(
+      ".item-price"
+    );
+
+    const info = principal.querySelector(
+      ".item-info"
+    );
+
+    if (!detalles || !titulo || !precio || !info) {
+      return;
+    }
+
+    if (detalles.querySelector(
+      ".chars-plan-picker"
+    )) return;
+
+    const planes = tarjetas.map(tarjeta => {
+
+      const nombre = tarjeta.querySelector(
+        ".item-title"
+      ).textContent.trim();
+
+      const detalle = tarjeta.querySelector(
+        ".item-details"
+      );
+
+      const coincidencia = nombre.match(
+        familia.re
+      );
+
+      let etiqueta = nombre.slice(
+        coincidencia
+          ? coincidencia[0].length
+          : familia.nombre.length
+      ).replace(
+        /^[\s\-–—:()]+|[\s\-–—:()]+$/g, ""
+      ).trim();
+
+      if (!etiqueta) etiqueta = nombre;
+
+      return {
+        nombre,
+        etiqueta,
+
+        precio: tarjeta.querySelector(
+          ".item-price"
+        ).textContent.trim(),
+
+        descripcion: obtenerDescripcion(detalle),
+
+        etiquetas: tarjeta.querySelector(
+          ".badge-container"
+        )?.cloneNode(true) || null,
+
+        beneficios: detalle.querySelector(
+          ".benefits-list"
+        )?.cloneNode(true) || null
+      };
+    });
+
+    const selector = document.createElement("div");
+    selector.className = "chars-plan-picker";
+
+    const rotulo = document.createElement("div");
+    rotulo.className = "chars-plan-label";
+    rotulo.textContent = "Selecciona tu plan:";
+
+    const opciones = document.createElement("div");
+    opciones.className = "chars-plan-options";
+
+    const botones = [];
+
+    planes.forEach((plan, indice) => {
+
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "chars-plan-option";
+
+      boton.textContent =
+        plan.etiqueta + " — " + plan.precio;
+
+      if (indice === 0) {
+        boton.classList.add("selected");
+      }
+
+      boton.setAttribute(
+        "aria-pressed",
+        String(indice === 0)
+      );
+
+      boton.addEventListener("click", event => {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        titulo.textContent = plan.nombre;
+        precio.textContent = plan.precio;
+
+        const etiquetasActuales =
+          info.querySelector(".badge-container");
+
+        if (etiquetasActuales) {
+          etiquetasActuales.remove();
+        }
+
+        if (plan.etiquetas) {
+          info.appendChild(
+            plan.etiquetas.cloneNode(true)
+          );
+        }
+
+        const beneficiosActuales =
+          detalles.querySelector(".benefits-list");
+
+        if (beneficiosActuales) {
+          beneficiosActuales.remove();
+        }
+
+        if (plan.beneficios) {
+          detalles.insertBefore(
+            plan.beneficios.cloneNode(true),
+            selector
+          );
+        }
+
+        const texto = Array.from(
+          detalles.childNodes
+        ).find(n =>
+          n.nodeType === Node.TEXT_NODE &&
+          n.textContent.trim()
+        );
+
+        if (texto) {
+          texto.textContent =
+            plan.descripcion + " ";
+        }
+
+        botones.forEach(b => {
+          b.classList.remove("selected");
+          b.setAttribute(
+            "aria-pressed", "false"
+          );
+        });
+
+        boton.classList.add("selected");
+        boton.setAttribute(
+          "aria-pressed", "true"
+        );
+
+      });
+
+      botones.push(boton);
+      opciones.appendChild(boton);
+
+    });
+
+    selector.appendChild(rotulo);
+    selector.appendChild(opciones);
+
+    const pedir = detalles.querySelector(
+      ".chars-order-btn"
+    );
+
+    detalles.insertBefore(
+      selector,
+      pedir || null
+    );
+
+    tarjetas.slice(1).forEach(
+      tarjeta => tarjeta.remove()
+    );
+  }
+
+  function actualizar() {
+
+    catalogo.querySelectorAll(
+      ":scope > .category"
+    ).forEach(categoria => {
+
+      familias.forEach(familia => {
+        agruparFamilia(familia, categoria);
+      });
+
+    });
+  }
+
+  actualizar();
+
+  catalogo.addEventListener("chars:catalogo-renderizado", actualizar);
+
+  console.info(
+    "CHARS: selectores adicionales cargados"
+  );
+
+})();
+</script>
+
+
+<---------------------------------------- CHARS NU FLOTANTE V1 -->
+<style>
+#chars-nu-acceso-rapido {
+  position: fixed;
+  left: 12px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 80;
+  padding: 12px 16px;
+  border: 1px solid #c084fc;
+  border-radius: 999px;
+  background: #820ad1;
+  color: #fff;
+  font: 700 14px system-ui, sans-serif;
+  box-shadow: 0 0 18px #820ad199;
+  cursor: pointer;
+}
+#chars-nu-acceso-rapido:active {
+  transform: scale(.97);
+}
+</style>
+<button
+  id="chars-nu-acceso-rapido"
+  type="button"
+  onclick="openModal('waModal')"
+  aria-label="Consultar pago con Nu por WhatsApp"
+>💜 Pagar con Nu</button>
+
+
+<---------------------------------------- CHARS VOLVER INICIO V1 -->
+<style>
+#chars-volver-inicio {
+  position: fixed;
+  left: 12px;
+  bottom: calc(75px + env(safe-area-inset-bottom));
+  z-index: 79;
+  display: none;
+  padding: 10px 15px;
+  border: 1px solid #22d3ee;
+  border-radius: 999px;
+  background: #10172c;
+  color: #67e8f9;
+  font: 700 14px system-ui, sans-serif;
+  box-shadow: 0 0 14px #22d3ee77;
+  cursor: pointer;
+}
+#chars-volver-inicio.visible {
+  display: block;
+}
+</style>
+
+<button id="chars-volver-inicio"
+ type="button"
+ aria-label="Volver al inicio de la pagina">
+  ↑ Inicio
+</button>
+
+<script>
+(function () {
+  const boton = document.getElementById(
+    "chars-volver-inicio"
+  );
+
+  function actualizar() {
+    boton.classList.toggle(
+      "visible",
+      window.scrollY > 500
+    );
+  }
+
+  boton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  window.addEventListener(
+    "scroll",
+    actualizar,
+    { passive: true }
+  );
+
+  actualizar();
+})();
+</script>
+
+</body>
+</html>
