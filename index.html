@@ -889,7 +889,39 @@
     </div>
   </div>
 
-  <footer>© 2026 Chars Stream Pro. Todos los derechos reservados.<br>Plataforma de alta fiabilidad en Veracruz, México.</footer>
+
+<section id="chars-soporte-fallas"
+ style="text-align:center;padding:22px;
+ margin:24px auto;max-width:600px;
+ background:#140f26;
+ border:1px solid #a855f7;
+ border-radius:18px;">
+
+<h3 style="color:white;">
+🤖 HARVIS - Soporte técnico
+</h3>
+
+<p style="color:#cbd5e1;">
+¿Tienes problemas con tu servicio?
+Envía un reporte para recibir asistencia.
+</p>
+
+<a href="https://wa.me/525629780972?text=%F0%9F%9B%A0%EF%B8%8F%20REPORTE%20OFICIAL%20DE%20FALLA%0ACHARS%20STREAM%20PRO%20%F0%9F%9B%A0%EF%B8%8F%0A%0ACopia%20este%20mensaje%2C%20completa%20tus%20datos%0Ay%20envialo%20a%20nuestro%20WhatsApp%20de%20soporte.%0A%0A%F0%9F%91%A4%20Nombre%20o%20ID%20del%20cliente%3A%0A%5BEscribe%20aqui%5D%0A%0A%F0%9F%93%BA%20Plataforma%20que%20presenta%20la%20falla%3A%0A%5BEscribe%20aqui%5D%0A%0A%F0%9F%93%B1%20Perfil%20asignado%3A%0A%5BPerfil%20o%20cuenta%20completa%5D%0A%0A%E2%9A%A0%EF%B8%8F%20Descripcion%20del%20problema%3A%0A%5BExplica%20que%20sucede%5D%0A%0A%F0%9F%93%85%20Fecha%20y%20hora%20aproximada%3A%0A%5BEscribe%20aqui%5D%0A%0A%F0%9F%93%B8%20%C2%BFAdjuntas%20captura%20del%20error%3F%0A%5BSi%20%2F%20No%5D%0A%0A%F0%9F%A4%96%20HARVIS%20-%20ASISTENCIA%0A%0ATu%20reporte%20sera%20recibido%20para%20revision%0Aa%20traves%20de%20nuestro%20canal%20de%20soporte.%0A%0ALa%20captura%20es%20recomendable%2C%20pero%0Ano%20obligatoria%20para%20iniciar%20la%20revision.%0A%0ANo%20compartas%20contrase%C3%B1as%2C%20codigos%0Ade%20verificacion%20ni%20datos%20bancarios.%0A%0APlazo%20objetivo%20de%20atencion%20y%20solucion%3A%0Ahasta%2072%20horas.%0A%0A%F0%9F%92%9C%20CHARS%20STREAM%20PRO%0ATu%20entretenimiento%2C%20sin%20limites.%0A"
+ target="_blank"
+ rel="noopener noreferrer"
+ style="display:inline-block;
+ padding:14px 20px;border-radius:12px;
+ background:#820ad1;color:white;
+ font-weight:bold;text-decoration:none;">
+🛠️ Reportar una falla
+</a>
+
+<p style="color:#94a3b8;font-size:12px;">
+La captura del error es opcional.
+</p>
+</section>
+
+<footer>© 2026 Chars Stream Pro. Todos los derechos reservados.<br>Plataforma de alta fiabilidad en Veracruz, México.</footer>
   
   <div class="whatsapp-container" onclick="openModal('waModal')">
     <img src="harvis.jpg" class="jazander-wa-btn" alt="Jazander Bot" onerror="this.style.display='none'">
@@ -2835,7 +2867,6 @@ function solicitarPromo(boton) {
 </script>
 
 
-<---------------------------------------- CHARS NU FLOTANTE V1 -->
 <style>
 #chars-nu-acceso-rapido {
   position: fixed;
@@ -2863,7 +2894,6 @@ function solicitarPromo(boton) {
 >💜 Pagar con Nu</button>
 
 
-<---------------------------------------- CHARS VOLVER INICIO V1 -->
 <style>
 #chars-volver-inicio {
   position: fixed;
@@ -2918,6 +2948,44 @@ function solicitarPromo(boton) {
   );
 
   actualizar();
+})();
+</script>
+
+
+<style>
+body.chars-zona-soporte #chars-nu-acceso-rapido,
+body.chars-zona-soporte #chars-volver-inicio {
+  display: none !important;
+}
+</style>
+<script>
+(function() {
+  const soporte = document.getElementById(
+    "chars-soporte-fallas"
+  );
+  const pie = document.querySelector("footer");
+
+  if (!soporte || !pie ||
+      !("IntersectionObserver" in window)) return;
+
+  const visibles = new Set();
+
+  const observador = new IntersectionObserver(
+    function(entradas) {
+      entradas.forEach(function(e) {
+        if (e.isIntersecting) visibles.add(e.target);
+        else visibles.delete(e.target);
+      });
+
+      document.body.classList.toggle(
+        "chars-zona-soporte",
+        visibles.size > 0
+      );
+    }
+  );
+
+  observador.observe(soporte);
+  observador.observe(pie);
 })();
 </script>
 
